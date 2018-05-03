@@ -1,0 +1,33 @@
+<div>
+	<% if user_signed_in? %>
+
+		<%= link_to 'log out', destroy_user_session_path, method: :delete %>
+
+		<div class="game-box col-10 offset-1">
+			TEXT GOES HERE
+		</div>
+		
+		<br/>
+		
+		<button class="click col-2 offset-1" id="inventory">Inventory</button>
+		<button class="click col-2" id="north">North</button>
+		<button class="click col-2" id="interact">Interact</button>
+		<button class="click col-2" id="action1">TBD</button>
+		<button class="click col-2" id="action2">TBD</button>
+
+		<br/>
+
+		<button class="click col-2 offset-1" id="west">West</button>
+		<button class="click col-2" id="south">South</button>
+		<button class="click col-2" id="east">East</button>
+		<button class="click col-2" id="action3">TBD</button>
+		<button class="click col-2" id="action4">TBD</button>
+
+	<% else %>
+		<h2>Please log in or sign up</h2>
+
+		<%= link_to 'log in', new_user_session_path %>
+		/
+		<%= link_to 'sign up', new_user_registration_path %>
+	<% end %>
+</div>
